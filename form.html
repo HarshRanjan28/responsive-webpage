@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form name="myform" onsubmit="return validation()">
+		
+		Username : <input type="text" value="" placeholder="Enter your usernme" id="user"><span id="username"></span><br>
+		Password : <input type="password" value="" placeholder="Enter your password" id="pass"><span id="password"></span><br>
+		<a href="#">Submit</a>
+
+		<script>
+			
+			function validation(){
+				var us = document.getElementById('user').value;
+				var ps = document.getElementById('pass').value;
+
+				if(us == ""){
+					document.getElementById("username").innerHTMl = "***please fill the username";
+					return false;
+				}
+				if(ps == ""){
+					document.getElementById("password").innerHTML = "***please fill the password";
+					return false;
+				}
+				else{
+					return true;
+				}
+			}
+	
+
+		</script>
+
+	</form>
+
+</body>
+</html>
